@@ -13,8 +13,24 @@ Luna also supports dynamic expression GIFs, making the assistant more interactiv
 📰 Latest News – Get live news updates for any city.
 🧮 Calculator Support – Perform calculations using voice commands.
 🤖 Dynamic Expressions – Luna displays emotions using GIFs like happy, sad, thinking, etc.
+
 📂 Project Structure
-Virtual-Assistant-Luna/ │ ├── index.html # Main HTML file ├── style.css # Styling ├── script.js # Core bot logic │ ├── logo.jpg # Luna's logo ├── mic.svg # Microphone icon ├── voice.gif # Default speaking animation │ └── faces/ # Folder for Luna's mood GIFs ├── happy.gif ├── sad.gif ├── thinking.gif ├── surprised.gif └── neutral.gif
+Virtual-Assistant-Luna/
+│
+├── index.html # Main HTML file
+├── style.css # Styling
+├── script.js # Core bot logic
+│
+├── logo.jpg # Luna's logo
+├── mic.svg # Microphone icon
+├── voice.gif # Default speaking animation
+│
+└── faces/ # Folder for Luna's mood GIFs
+├── happy.gif
+├── sad.gif
+├── thinking.gif
+├── surprised.gif
+└── neutral.gif
 
 🖼️ Adding Expression GIFs
 Luna can express different emotions dynamically.
@@ -26,8 +42,8 @@ Sad 😢	sad.gif
 Thinking 🤔	thinking.gif
 Surprised 😲	surprised.gif
 Neutral 😐 (default)	neutral.gif
-Example in Code:
 
+Example in Code:
 // Change Luna's mood dynamically
 setBotMood("happy");     // Displays happy.gif
 setBotMood("thinking");  // Displays thinking.gif
