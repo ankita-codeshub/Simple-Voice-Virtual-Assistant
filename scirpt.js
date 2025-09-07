@@ -3,7 +3,7 @@ let content = document.querySelector("#content");
 let voice = document.querySelector("#voice");
 let botFace = document.querySelector("#botFace");
 
-// Mood images
+
 let moods = {
     happy: "faces/happy.png",
     sad: "faces/sad.png",
@@ -26,7 +26,7 @@ function speak(text) {
         console.error("Speech Synthesis not supported");
         return;
     }
-    window.speechSynthesis.cancel(); // Cancel any ongoing speech
+    window.speechSynthesis.cancel(); 
     let text_speak = new SpeechSynthesisUtterance(text);
     text_speak.rate = 1;
     text_speak.pitch = 1;
@@ -35,7 +35,7 @@ function speak(text) {
     window.speechSynthesis.speak(text_speak);
 }
 
-// Random greetings (like Google Assistant)
+
 function wishMe() {
     let day = new Date();
     let hours = day.getHours();
@@ -102,7 +102,6 @@ function takeCommand(message) {
     btn.style.display = "flex";
     voice.style.display = "none";
 
-    // Random responses like Google Assistant
     let helloReplies = [
         "Hello,what can I do for you?",
         "Hi there! Need any help?",
@@ -223,8 +222,7 @@ function takeCommand(message) {
     }
 
     else if (message.includes("open facebook")) {
-        // Note: Your original code had weather replies here mistakenly.
-        // Keeping as is per your request.
+        
         speak(randomReply([
             "Here is the live weather in " + city,
             "Checking the sky in " + city,
@@ -260,8 +258,7 @@ function takeCommand(message) {
     }
 
     else if (message.includes("motivate") || message.includes("motivation")) {
-        // 'city' and 'quotes' are undefined in your original code.
-        // Keeping as is per your request, but this will cause errors.
+        
         speak(randomReply([
             "Here are the latest headlines from " + city,
             "Checking news in " + city,
@@ -285,4 +282,5 @@ function takeCommand(message) {
         ]));
         window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, "_blank");
     }
+
 }
